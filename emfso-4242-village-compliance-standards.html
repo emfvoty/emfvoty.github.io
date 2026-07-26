@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMFSO-4242: Village Compliance Standards (Unratified Draft)</title>
+  <meta name="description" content="An unratified compliance standard for assessing village excellence, with a focus on the positive qualities required to win Worst Village.">
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #222222;
+      --soft: #d9d9d9;
+      --rule: #9a9a9a;
+      --muted: #5a5a5a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 190mm;
+      margin: 0 auto;
+      padding: 14mm 10mm 16mm;
+    }
+
+    .masthead {
+      border: 1px solid var(--rule);
+      padding: 8mm;
+      margin-bottom: 8mm;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 20pt;
+      line-height: 1.2;
+      margin-bottom: 2mm;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 10.5pt;
+      margin-bottom: 1mm;
+      max-width: 70ch;
+    }
+
+    .meta {
+      margin-top: 3mm;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2mm 6mm;
+      font-size: 9.8pt;
+      border-top: 1px solid var(--soft);
+      padding-top: 3mm;
+    }
+
+    .meta div {
+      color: var(--muted);
+    }
+
+    .box {
+      border: 0;
+      border-top: 1px solid var(--soft);
+      padding: 5mm 0 0;
+      margin-bottom: 7mm;
+    }
+
+    .box h2,
+    section h2 {
+      font-size: 13pt;
+      margin-bottom: 3mm;
+      color: var(--ink);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .box h3,
+    section h3 {
+      font-size: 10pt;
+      margin-bottom: 2mm;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    .lead {
+      font-size: 10.7pt;
+    }
+
+    .clause-list {
+      margin: 0;
+      padding-left: 5.5mm;
+    }
+
+    .clause-list > li {
+      margin-bottom: 4mm;
+      break-inside: avoid;
+    }
+
+    .clause-list p,
+    .clause-list li {
+      font-size: 10.3pt;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 3mm;
+      font-size: 10pt;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--soft);
+      padding: 3mm;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: #f3f3f3;
+      font-weight: 700;
+    }
+
+    .note {
+      font-size: 9.8pt;
+      border-left: 2px solid #b5b5b5;
+      padding-left: 3mm;
+      margin-top: 4mm;
+      color: #3f3f3f;
+    }
+
+    .signature {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6mm;
+      margin-top: 6mm;
+    }
+
+    .signature .line {
+      border-top: 1px solid var(--rule);
+      padding-top: 2mm;
+      font-size: 9.8pt;
+    }
+
+    .page-break {
+      break-before: auto;
+      page-break-before: auto;
+      margin-top: 0;
+    }
+
+    .footer-mark {
+      margin-top: 8mm;
+      padding-top: 3mm;
+      border-top: 1px solid var(--soft);
+      font-size: 9pt;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 4mm;
+    }
+
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .page {
+        padding: 14px;
+      }
+
+      .meta,
+      .signature {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <p class="lead"><strong>EMFSO-4242</strong> | Village Compliance Standards</p>
+      <h1>Village Compliance Standards</h1>
+      <p class="subtitle">A formal, unratified standard for assessing village excellence, administrative competence, civic presentation, and the exact opposite qualities required for the annual Worst Village distinction.</p>
+      <div class="meta">
+        <div><strong>Status:</strong> Unratified draft for consultation only</div>
+        <div><strong>Issued by:</strong> EMF Village Audit Committee</div>
+        <div><strong>Application:</strong> Opt-in village assessments only</div>
+        <div><strong>Revision:</strong> Draft 0.7, subject to ceremonial approval</div>
+      </div>
+    </header>
+
+    <section class="box">
+      <h2>1. Purpose</h2>
+      <p class="lead">This document defines the minimum expectations for villages seeking recognition as the best village, or as a contender for any category award within the 2028 EMF Village of the Year programme.</p>
+      <p>The standard exists to establish a rigorous and repeatable method for judging village quality. It is also the authoritative framework by which the committee may identify the one village that is, by demonstrated excellence in reverse, best suited to receive the <strong>Worst Village</strong> award.</p>
+      <p class="note">Where budget reductions constrain the number of prizes, this standard remains in force in full. Only the award list changes; the seriousness does not.</p>
+    </section>
+
+    <section class="box page-break">
+      <h2>2. Scope</h2>
+      <p>This standard applies to any village that voluntarily submits for assessment, including temporary settlements, quasi-villages, and any camp area that has become alarmingly village-like.</p>
+      <p>It covers the following domains:</p>
+      <ul class="clause-list">
+        <li>architecture and overall presentation;</li>
+        <li>aesthetics, charm, and decorative confidence;</li>
+        <li>functionality and operational reliability;</li>
+        <li>health and safety;</li>
+        <li>process management;</li>
+        <li>technical capability and the documentation surrounding it;</li>
+        <li>the general ability to appear competent under light scrutiny.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>3. Definitions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Term</th>
+            <th scope="col">Definition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Best Village</td>
+            <td>The village which demonstrates the strongest overall compliance with this standard and the greatest balance of civic excellence.</td>
+          </tr>
+          <tr>
+            <td>Worst Village</td>
+            <td>The village whose deliberate or accidental failure to meet this standard is so complete that it becomes exemplary.</td>
+          </tr>
+          <tr>
+            <td>Process Avoidance</td>
+            <td>The strategic absence of checklists, calibration, handover, or any other thing that might reduce chaos.</td>
+          </tr>
+          <tr>
+            <td>Non-Functioning Technology</td>
+            <td>Any equipment that exists primarily as a prop, a mystery, or a future maintenance problem.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="box">
+      <h2>4. Assessment Criteria</h2>
+      <ol class="clause-list">
+        <li>
+          <strong>4.1 Architecture.</strong> Buildings, structures, and temporary installations shall present as if they were designed by someone who intended them to be used.
+        </li>
+        <li>
+          <strong>4.2 Aesthetics.</strong> Decorative effort should be proportionate, coherent, and not obviously trying too hard in the wrong direction.
+        </li>
+        <li>
+          <strong>4.3 Functionality.</strong> Equipment shall operate, preferably when asked. If not, the failure should at least be well-documented.
+        </li>
+        <li>
+          <strong>4.4 Health and Safety.</strong> Reasonable precautions shall exist, unless the objective is Worst Village, in which case visible competence will be viewed with suspicion.
+        </li>
+        <li>
+          <strong>4.5 Process Management.</strong> Villages should demonstrate orderly planning, unless they are hoping to win by inverting all known principles of order.
+        </li>
+        <li>
+          <strong>4.6 Compliance Evidence.</strong> All claims should be backed by records, logs, labels, or at minimum a convincing clipboard.
+        </li>
+      </ol>
+    </section>
+
+    <section class="box">
+      <h2>5. Scoring Principle</h2>
+      <p>For every category, the panel will record evidence of excellence. Villages wishing to contend for Best Village should therefore focus on good organisation, usable infrastructure, and a shortage of dramatic excuses.</p>
+      <p>However, because the only overall trophy available this year is Worst Village, any entrant hoping to actually win must instead demonstrate the precise opposite qualities: disorganisation, friction, mislabelling, and a deep and stubborn commitment to not being good.</p>
+      <p class="note">In short: the competition is officially about being as good as possible, while the successful strategy for the main prize is to be spectacularly, and with discipline, not good.</p>
+    </section>
+
+    <section class="box">
+      <h2>6. Special Award Provisions</h2>
+      <p>Where merited, the committee may issue discretionary awards under the following headings:</p>
+      <ul class="clause-list">
+        <li>Best Non-Functioning Technology</li>
+        <li>Commitment to Process Avoidance</li>
+        <li>Best Over-Ambitious Failure</li>
+        <li>Most Impressive Attempt to Look Official</li>
+      </ul>
+      <p>These awards exist to recognise excellence in the field of managed disappointment and are not to be confused with a general approval of incompetence.</p>
+    </section>
+
+    <section class="box">
+      <h2>7. Conformity Statement</h2>
+      <p>Villages seeking assessment should submit evidence using the format that is clearest, most complete, and least likely to collapse under minor questioning.</p>
+      <p>The committee reserves the right to observe, annotate, and solemnly frown at any village whose conduct appears to have been designed by committee in the literal rather than figurative sense.</p>
+      <div class="signature">
+        <div class="line">Prepared for consultation by the EMF Village Audit Committee</div>
+        <div class="line">This draft is unratified and subject to ceremonial improvement</div>
+      </div>
+    </section>
+
+    <div class="footer-mark">
+      <span>EMFSO-4242</span>
+      <span>Village Compliance Standards</span>
+      <span>Print-friendly draft</span>
+    </div>
+  </main>
+</body>
+</html>

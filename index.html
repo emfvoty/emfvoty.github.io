@@ -1,1 +1,388 @@
-<p>Coming Soon</p>
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>EMF Camp (Unofficial) Village of the Year Awards</title>
+	<meta name="description" content="A deeply serious, completely formal, definitely not silly celebration of village standards and their strategic absence.">
+	<style>
+		:root {
+			--paper: #f6f2e8;
+			--ink: #1f2a1f;
+			--moss: #4a6b3e;
+			--hedge: #6f8f4f;
+			--stamp: #9a2f2f;
+			--sky: #d9e6d8;
+			--line: #c6bea9;
+			--card: #fcfaf5;
+			--shadow: rgba(31, 42, 31, 0.14);
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: "Georgia", "Times New Roman", serif;
+			color: var(--ink);
+			background:
+				radial-gradient(circle at 12% 8%, rgba(111, 143, 79, 0.18), transparent 35%),
+				radial-gradient(circle at 85% 20%, rgba(154, 47, 47, 0.1), transparent 28%),
+				linear-gradient(180deg, var(--sky) 0%, var(--paper) 22%, var(--paper) 100%);
+			line-height: 1.5;
+		}
+
+		.shell {
+			max-width: 1024px;
+			margin: 0 auto;
+			padding: 1rem;
+		}
+
+		.masthead {
+			margin-top: 0.8rem;
+			background: linear-gradient(180deg, #ffffff 0%, #f4efe1 100%);
+			border: 2px solid var(--line);
+			box-shadow: 0 10px 24px var(--shadow);
+			position: relative;
+			overflow: hidden;
+		}
+
+		.masthead::before {
+			content: "Official appology and rectification";
+			position: absolute;
+			top: 1.7rem;
+			right: -5rem;
+			transform: rotate(14deg);
+			background: #f5e0e0;
+			border: 1px solid #c67f7f;
+			color: #7b1d1d;
+			font-size: 0.72rem;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			padding: 0.22rem 5rem;
+			font-weight: bold;
+		}
+
+		.masthead-inner {
+			padding: 1.35rem;
+			border: 6px double var(--moss);
+			margin: 0.75rem;
+		}
+
+		.kicker {
+			margin: 0;
+			font-size: 0.84rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: #314631;
+		}
+
+		h1 {
+			margin: 0.45rem 0;
+			font-size: clamp(1.8rem, 5vw, 3rem);
+			line-height: 1.1;
+			text-wrap: balance;
+		}
+
+		.subtitle {
+			margin: 0;
+			font-size: 1.05rem;
+			max-width: 70ch;
+		}
+
+		.menu {
+			margin-top: 1rem;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem;
+		}
+
+		.menu a {
+			text-decoration: none;
+			color: var(--ink);
+			border: 1px solid var(--line);
+			background: #fffdf8;
+			padding: 0.35rem 0.7rem;
+			font-size: 0.95rem;
+		}
+
+		.menu a:hover,
+		.menu a:focus-visible {
+			background: #f1ebdc;
+			outline: 2px solid var(--hedge);
+			outline-offset: 1px;
+		}
+
+		.grid {
+			margin-top: 1rem;
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		}
+
+		.panel {
+			background: var(--card);
+			border: 1px solid var(--line);
+			box-shadow: 0 5px 12px var(--shadow);
+			padding: 1rem;
+		}
+
+		.panel.cancelled {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.panel.cancelled::after {
+			content: "Cancelled";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-32deg);
+			transform-origin: center;
+			color: #7b1d1d;
+			font-size: 0.72rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			padding: 0.1rem 0.45rem;
+			font-weight: bold;
+			background: rgba(245, 224, 224, 0.85);
+			pointer-events: none;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 1.35rem;
+			line-height: 1.2;
+		}
+
+		.meta {
+			font-size: 0.95rem;
+			color: #2f402f;
+		}
+
+		.scorecard {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 0.7rem;
+			font-size: 0.96rem;
+		}
+
+		.scorecard th,
+		.scorecard td {
+			border: 1px solid var(--line);
+			padding: 0.55rem;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.scorecard th {
+			background: #ebe5d6;
+		}
+
+		.stamp {
+			display: inline-block;
+			margin-top: 0.4rem;
+			border: 2px solid var(--stamp);
+			color: var(--stamp);
+			padding: 0.25rem 0.6rem;
+			font-size: 0.84rem;
+			letter-spacing: 0.08em;
+			font-weight: bold;
+			transform: rotate(-4deg);
+			text-transform: uppercase;
+		}
+
+		.timeline {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border-left: 3px solid var(--line);
+		}
+
+		.timeline li {
+			padding: 0 0 0.9rem 1rem;
+			position: relative;
+		}
+
+		.timeline li::before {
+			content: "";
+			position: absolute;
+			left: -0.48rem;
+			top: 0.22rem;
+			width: 0.72rem;
+			height: 0.72rem;
+			border-radius: 50%;
+			background: var(--hedge);
+			border: 1px solid #3f5a30;
+		}
+
+		.small-print {
+			font-size: 0.88rem;
+			color: #3a4a3a;
+			background: #f3eddf;
+			border-left: 4px solid var(--moss);
+			padding: 0.7rem;
+		}
+
+		.notice {
+			margin-top: 1rem;
+			background: #f1eadc;
+			border: 1px dashed #7b6b46;
+			padding: 0.8rem;
+			font-size: 0.95rem;
+		}
+
+		.cta {
+			margin-top: 0.7rem;
+			display: inline-block;
+			background: var(--moss);
+			color: #fff;
+			text-decoration: none;
+			padding: 0.52rem 0.9rem;
+			border: 1px solid #263b1f;
+			font-weight: bold;
+		}
+
+		.cta:hover,
+		.cta:focus-visible {
+			background: #3d5c31;
+			outline: 2px solid #23371b;
+			outline-offset: 2px;
+		}
+
+		footer {
+			margin: 1.2rem 0 2rem;
+			padding: 0.9rem 0.2rem;
+			border-top: 1px solid var(--line);
+			font-size: 0.88rem;
+			color: #2c3c2c;
+		}
+
+		@media (max-width: 640px) {
+			.masthead::before {
+				right: -5.5rem;
+				top: 0.6rem;
+				font-size: 0.64rem;
+			}
+
+			.masthead-inner {
+				padding: 1rem;
+				margin: 0.55rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="shell">
+		<header class="masthead" id="top">
+			<div class="masthead-inner">
+				<p class="kicker">Parish-Adjacent Civic Excellence Programme</p>
+				<h1>EMF Village of the Year 2028</h1>
+				<p class="subtitle">An opt-in competition to identify the very best village, the most exemplary individual categories, and the finest civic efforts of 2028. The small complication is that, owing to budget reductions, the only overall award this year is Worst Village, which of course requires an altogether different and deeply committed kind of excellence.</p>
+				<nav class="menu" aria-label="Page sections">
+					<a href="#introduction">Introduction</a>
+					<a href="#criteria">Judging Criteria</a>
+					<a href="#timeline">Timeline</a>
+					<a href="#awards">Special Mentions</a>
+					<a href="#register">Apply</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="panel" id="introduction" aria-labelledby="introduction-title">
+				<h2 id="introduction-title">Introduction</h2>
+				<p>It has come to our attention, via <a href="">recently rediscovered footage</a> from the 2017 Bodgeham-on-Wye Primary School Year 7 "<i>EMF History Documentary</i>" project, that the title of <em>2016's Worst Village</em> may have been awarded in a wholly unacceptable manner.</p>
+				<p>The footage suggests that, rather than  arising from a standards-based audit, the title was conferred by a gentleman from foreign shores wandering into the village and solemnly declaring, "<i>This is undoubtedly the worst village of 2016</i>" without any methodology, scoring framework, or judging criteria whatsoever.</p>
+				<p>We find this entirely unacceptable and offer our wholehearted apologies for this egregious historical oversight.</p>
+				<p>To rectify matters, we will host the 2028 EMF Village of the Year competition, where our team of expert judges and auditors will assess architecture, aesthetics, functionality, health and safety, process management, and a multitude of other categories against the as-yet-unratified EMFSO-4242 <a href="emfso-4242-village-compliance-standards.html">Village Compliance Standards</a>. This time, judging will be afforded the respect and seriousness it deserves.</p>
+				<p class="small-print"><strong>Funding Note:</strong> due to parish council budget reductions, the only overall category this year is <strong>Worst Village</strong>. Discretionary awards may still be issued for distinctions including Best Non-Functioning Technology, Commitment to Process Avoidance, and Best Over-Ambitious Failure.</p>
+			</section>
+
+			<section class="grid" aria-label="Overview panels">
+				<article class="panel cancelled">
+					<h2>Best overall village</h2>
+					<p class="meta">T</p>
+				</article>
+
+				<article class="panel cancelled">
+					<h2>Most aesthetically pleasing village</h2>
+					<p>As</p>
+				</article>
+
+				<article class="panel cancelled">
+					<h2>Best Equipped Village</h2>
+					<p><strong>P</strong> V</p>
+				</article>
+			</section>
+
+			<section class="grid" aria-label="Overview panels">
+				<article class="panel cancelled">
+					<h2>Most hospitable village</h2>
+					<p class="meta">T</p>
+				</article>
+
+				<article class="panel cancelled">
+					<h2>Most compliant village</h2>
+					<p>As</p>
+				</article>
+
+				<article class="panel">
+					<h2>Worst Village</h2>
+					<p><strong>The Worst Village is awarded to the village which shows just how far it's possible to deviate from the standard.</strong> It must show disregard for process, and not attention to detail whatsoever.</p>
+				</article>
+			</section>
+
+				<article class="panel" id="awards">
+					<h2>Special Awards</h2>
+					<p>The panel may issue additional commendations where standards of (under)performance are notably advanced. E.g.</p>
+					<ul>
+						<li>Most Ambitious Queue for the Simplest Thing</li>
+						<li>Best Improvised Explanation of Why It Definitely Worked Yesterday</li>
+						<li>Outstanding Contribution to Non-Operational Tech</li>
+						<li>The "It's not dumb if it works" award for the most inappropriate use of technology to solve a simple problem</li>
+						<li>Lifetime Achievement in "It Seemed Like a Good Idea at the Time"</li>
+
+					</ul>
+					<p class="small-print">Note: potential category names are reviewed annually in response to emerging incidents and deeply avoidable circumstances.</p>
+				</article>
+
+
+
+			<section class="grid" id="timeline" aria-label="Event timeline and notes">
+				<article class="panel">
+					<h2>Audit-Day Timeline</h2>
+					<ul class="timeline">
+						<li><strong>09:00</strong> Panel arrives with clipboards and reflective concern.</li>
+						<li><strong>10:30</strong> Preliminary inspection of shared structures and suspiciously confident signage.</li>
+						<li><strong>14:00</strong> Documentary interlude (recommended format: 4:3 and lightly out-of-sync audio).</li>
+						<li><strong>18:30</strong> Main award and special mentions announced with full civic gravity.</li>
+					</ul>
+				</article>
+
+			</section>
+
+			<section class="panel" id="register" aria-labelledby="register-title">
+				<h2 id="register-title">Village Registration</h2>
+				<p>Nominations are now open for 2028. To apply, send your village name, rough headcount, and a concise account of at least one preventable mishap.</p>
+				<p>Pre-audit declarations such as "we absolutely have a plan" are welcomed .</p>
+				<a class="cta" href="mailto:committee@emfvoty.example?subject=2028%20Village%20Registration">Submit Registration Dossier</a>
+				<div class="notice" role="note">
+					Next filing window closes on <strong>31 May 2028</strong>. Late entries may still be considered if accompanied by persuasive confusion.
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<strong>Electromagnet Fields Camp Village of the Year (Provisional) Awards Committee</strong><br>
+			Printed digitally on responsibly sourced pixels. No actual standards body has endorsed this programme, although several people have brought clipboards.
+		</footer>
+	</div>
+</body>
+</html>
